@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>This generates a Swift extension.</string>
+	<key>Summary</key>
+	<string>This generates a Swift extension.</string>
+	<key>SortOrder</key>
+	<string>2</string>
+    <key>MainTemplateFile</key>
+	<string>___VARIABLE_extendedClass:identifier___+___VARIABLE_productName:identifier___.swift</string>
+    
+    <key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>extendedClass</string>
+			<key>Type</key>
+			<string>class</string>
+			<key>Name</key>
+			<string>Extension of:</string>
+			<key>Default</key>
+			<string>NSObject</string>
+			<key>Description</key>
+			<string>What class/struct/protocol to extend</string>
+			<key>Required</key>
+			<true/>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Name</key>
+			<string>Extension name:</string>
+            <key>Default</key>
+			<string>Extension</string>
+            <key>Required</key>
+			<true/>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>previewName</string>
+			<key>Type</key>
+			<string>static</string>
+			<key>Name</key>
+			<string>Preview:</string>
+            <key>Default</key>
+			<string>___VARIABLE_extendedClass:identifier___+___VARIABLE_productName:identifier___.swift</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+	</array>
+</dict>
+</plist>
