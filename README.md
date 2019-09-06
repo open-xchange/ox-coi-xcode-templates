@@ -1,5 +1,5 @@
 ## Preambel
-To be consistent - from a file structure point of view - in development for OX Coi please use these templates whenever you create a new Swift file for this project.
+To be consistent in development for OX Coi please use these templates whenever you create a new Swift file for this project.
 
 > [Thank you for your cooperation](https://www.youtube.com/watch?v=nx2G3OCVRNk)™.
 
