@@ -14,11 +14,7 @@ TEMPLATE_PATH="${HOME}/Library/Developer/Xcode/Templates"
 FILE_TEMPLATES_PATH="${TEMPLATE_PATH}/${FILE_TEMPLATES_DIR}"
 PROJECT_TEMPLATES_PATH="${TEMPLATE_PATH}/${PROJECT_TEMPLATES_DIR}"
 
-OX-COI_TEMPLATE="OX Coi"
-
-# Installation related
-TMP_SYS_DIR="/tmp"
-TMP_INSTALL_PATH="${TMP_SYS_DIR}/ios-xctpl"
+OX_COI_TEMPLATES="OX Coi"
 
 REPO_NAME="ox-coi-xcode-templates"
 REPO_URL="https://github.com/open-xchange/${REPO_NAME}.git"
@@ -111,14 +107,22 @@ function handle_project_templates() {
 
 function install_xcode_templates() {
     show_header "Install OX Coi Templates"
-    
-    mkdir "${TMP_INSTALL_PATH}"
-    cd "${TMP_INSTALL_PATH}"
-    
-    git clone ${REPO_URL}
-    cd ${REPO_NAME}
 
-    cp -r "File\ Templates/*" "${FILE_TEMPLATES_PATH}" &>/dev/null
+    TMP_SYS_DIR="/tmp"
+    TMP_INSTALL_DIR="xctpl"
+    TMP_INSTALL_PATH="${TMP_SYS_DIR}/${TMP_INSTALL_DIR}"
+    
+    cd "${TMP_SYS_DIR}" &>/dev/null
+    mkdir "${TMP_INSTALL_DIR}" &>/dev/null
+    cd "${TMP_INSTALL_DIR}" &>/dev/null
+
+    git clone ${REPO_URL} &>/dev/null
+    cd ${REPO_NAME} &>/dev/null
+
+    cp -a "./File Templates/${OX_COI_TEMPLATES}" "${FILE_TEMPLATES_PATH}/" &>/dev/null
+    
+    cd "${TMP_SYS_DIR}" &>/dev/null
+    rm -rf "${TMP_INSTALL_DIR}" &>/dev/null
 
     echo "** File Templates installation done."
 }
