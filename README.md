@@ -8,7 +8,7 @@ To be consistent - from a file structure point of view - in development for OX C
 There is **NO NEED** to clone this repo just to install the templates. To install the Xcode templates just open your terminal and execute the command below:
 
 ```
-$ curl -SL https://raw.githubusercontent.com/open-xchange/ox-coi-xcode-templates/master/install.sh | sh
+curl -SL https://raw.githubusercontent.com/open-xchange/ox-coi-xcode-templates/master/install.sh | sh
 ```
 
 That's all and you're done.
